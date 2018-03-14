@@ -1,0 +1,392 @@
+html, body {
+  	width:  100%;
+  	height: 100%;
+ 	margin: 0px;
+ 	font-family: 'Boogaloo', cursive;
+	font-weight: 400 !important;
+	font-size: 1.2em;
+	background-color: #fffab1;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23848288' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+#rgbColor {
+	background-color: "";
+	height: 40px;
+	color: "";
+	text-align: center;
+}
+
+#canvas {
+	box-shadow: 15px 10px 8px #888888;
+	background: white;
+	cursor: crosshair;
+	width: ;
+	height: ;
+}
+
+.elementWidth {
+	width: 100%;
+}
+
+.slider-control {
+	 border-radius: 2px;
+}
+
+#table-section table, th, tr, td {
+	border: 1px solid #ccc;
+	text-overflow: hidden;
+	text-align: center;
+}
+
+#table-section tr:nth-child(even) {
+    background-color: #ebebeb;
+}
+
+#table-section tr:nth-child(odd) {
+    background-color: #959595;
+}
+
+img {
+	max-width: 300px;
+	max-height: 100px;
+}
+
+
+
+#pagination {
+    display: none;
+}
+
+#pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+#pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+#pagination a:hover:not(.active) {background-color: #ddd;}
+
+#pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.mark-text-as-disabled {
+	color: #bfbfbf;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.direction-col {
+  flex-direction: column;
+}
+
+
+
+/* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+
+.flex-item {
+	flex: 1;  
+}
+
+#red-slider {
+	color: red;
+}
+
+#green-slider {
+	color: green;
+}
+
+#blue-slider {
+	color: blue;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-style: outset;
+  border-width: 2px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+input:hover + .slider {
+  border-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  transform: translateX(40px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+ /* Customize the label (the container) */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border-style: outset;
+  border-width: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #eee;
+  border-color: #2196F3;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+} 
+
+/* the background of dot/circle - change color when inputs disabled */
+.radio-container input:disabled ~ .checkmark {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+.btn-container {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.btn-container button {display:none;}
+
+.b-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-style: outset;
+  border-width: 2px;
+  border-radius: 35px;
+  text-align: center;
+}
+
+.b-button:hover {
+	background-color: #eee;
+	border-color: #2196F3;
+	/* color: white; */
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.b-button:focus {
+	border-style: inset;
+}
+
+.b-button:active {
+	transform: translateY(3px);
+}
+
+/*select list*/ 
+ .selecting-option {
+ 	border-radius: 35px;
+ 	border-style: outset;
+ 	width: 100px;
+ 	height: 40px;
+ 	text-align: center;
+ 	background-color: #ccc;
+ 	font-weight: bold;
+ 	-moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+ }
+ 
+ .selecting-option:focus {
+ 	border-style: inset;
+  	border-color: #2196F3;
+  	background-color: #eee;
+ 	
+ }
+ 
+.selecting-option:hover {
+ 	border-color: #2196F3;
+ 	background-color: #eee;
+ }
+ 
+ #info p {
+ 	text-align: left;
+ }
+ 
+ #database-section input {
+ 	-moz-border-radius: 35px; /* Firefox */
+    -webkit-border-radius: 35px; /* Safari, Chrome */
+    border-radius: 35px;
+    padding-left: 10px;
+    padding-right: 10px;   
+ }
+ 
+ #database-section {
+ 	display: flex;
+ 	justify-content: center;
+ }
+
+.footer-property {
+	text-align: center;
+	position: inherit;
+	margin-top: 100px;
+	bottom: 5px;
+	height: 35px;
+	
+}
+
+.title {
+	text-align: left;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.list {
+	text-align: center;
+	list-style: none;
+	font-size: 1em;
+	padding-right: 20px;
+    padding-left: 20px;
+}
+
+.horizontal-box {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+h2 {
+	line-height: 1.6;
+}
+
+/* To medium devices (laptops/desktops, max 768px) */
+@media only screen and (max-width: 768px) {
+    
+    .flex-direction-col {
+	  flex-direction: column;
+	}
+	
+	.flex-wrap {
+		flex-wrap: wrap;		
+	}
+	
+	.flex-direction-row {
+		flex-direction: row;
+	}
+	
+	.horizontal-box {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+}
